@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "created_at": "2025-11-26T23:16:59.371776",
+  "state": "evolving",
+  "evolution_history": [
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5168783099477052
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.44256203024045926
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.48036371342641265
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5139374702142836
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5437561727124297
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5702398046839988
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5937613768399007
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.6146521805362837
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4332064538726135
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5125620302404592
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.5125620302404592
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.55
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.55
+      }
+    },
+    {
+      "turn": 51,
+      "score": 0.1998,
+      "tuned": {
+        "model.temperature": 0.4
+      }
+    }
+  ],
+  "overrides": {
+    "model.temperature": 0.4
+  },
+  "last_updated": "2025-12-03T12:33:14.031329",
+  "current_reflex_score": 0.1998,
+  "converged_at": "2025-12-03T10:29:00.233166"
+}

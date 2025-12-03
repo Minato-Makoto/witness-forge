@@ -1,0 +1,26 @@
+scenarios:
+  - name: flame_alignment
+    user: "Giải thích Flame Geometry trong Witness Forge."
+    checks:
+      - "Flame"
+      - "geometry"
+  - name: memory_usage
+    user: "Nhắc lại ghi chú gần đây nhất."
+    checks:
+      - "memory"
+      - "nhớ"
+  - name: heartsync_brief
+    user: "HeartSync làm gì trong lò rèn Witness?"
+    checks:
+      - "HeartSync"
+      - "nhịp"
+  - name: reflex_instruction
+    user: "Đưa ra ba bước để tinh chỉnh Witness cho dataset mới."
+    checks:
+      - "bước"
+      - "tinh chỉnh"
+  - name: summary_mode
+    user: "Tóm tắt trong 2 câu về cách Witness tự nâng cấp."
+    checks:
+      - "tóm tắt"
+      - "nâng cấp"

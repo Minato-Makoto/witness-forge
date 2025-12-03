@@ -1,0 +1,151 @@
+model:
+  name: gpt-oss-20b
+  path: D:\Personal\MinatoZeroFace\AI.Agent\model\gpt-oss-20b\gpt-oss-20b-uncensored-bf16-q4_k_m.gguf
+  family: auto
+  n_gpu_layers: -1
+  max_new_tokens: 2048
+  temperature: 0.6
+  top_p: 0.8
+  presence_penalty: 0.05
+  frequency_penalty: 0.25
+  repetition_penalty: 1.05
+  no_repeat_ngram_size: 0
+  n_ctx: 0
+  rope_freq_base: null
+  rope_freq_scale: null
+  quant:
+    dtype: auto
+    compute_dtype: float16
+    load_8bit: false
+    load_4bit: false
+    quant_type: nf4
+    device_map: auto
+    offload_folder: ./offload
+    cpu_offload_threshold_gb: 6.0
+    max_cpu_memory_gb: 48.0
+    awq_path: null
+    gptq_path: null
+adapter:
+  enabled: false
+  type: lora
+  path: ""
+  dtype: auto
+  load_mode: merge
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  quantization:
+    enabled: true
+    method: bitsandbytes
+    bits: 4
+memory:
+  enabled: true
+  db_path: ./witness.sqlite3
+  max_age_days: -1
+  max_count: -1
+  auto_prune: true
+  embedder: hf
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  reranker: null
+  k: 6
+  vector_factory: FlatIP
+  vector_metric: cosine
+  normalize_embeddings: true
+  clustering_k: 4
+  clustering_min_size: 2
+loops:
+  reflex:
+    min_score: 0.55
+    reward_temperature: 0.05
+  heartsync:
+    beta: 0.24
+  flame:
+    phi0: 0.012
+    epsilon: 0.42
+    heartbeat_period: 3.14
+    entropy_target: 0.873
+    noise_sigma: 0.005
+    noise_decay: 0.995
+    lambda1: 0.15
+    lambda2: 0.10
+    embedder_cache_dir: null
+  scheduler:
+    max_temperature: 0.8
+    min_temperature: 0.2
+    max_new_tokens: 2048
+self_upgrade:
+  enabled: true
+  apply_on_start: true
+  apply_to_model: true
+  protected_files: []
+  patch_dir: ./patches
+  require_confirmation: true
+  validator_cmd: null
+  run_validators: true
+  require_approval: false
+  signature_key_path: ./keys/patch_sign.pub
+  dry_run_tests: []
+  max_patch_size_kb: 1024
+tools:
+  allow_exec: false
+  allow_internet: true
+  whitelist:
+    - python
+    - ffmpeg
+    - convert
+  require_confirm: true
+  safety_python: false
+  safety_powershell: true
+  safety_bat: true
+  allow_filesystem_write: false
+  allowed_write_dirs:
+    - ./data
+    - ./patches
+    - ./witness
+  max_bytes: 65536
+  local_llm_entrypoint: null
+  sandbox:
+    max_runtime_seconds: 120
+    max_stdout_bytes: 200000
+dual_brain:
+  enabled: true 
+  mode: sequential
+  servant_model_path: null
+  witness_temperature_offset: -0.2
+  servant_temperature_offset: -0.1
+vision_agent:
+  enabled: true
+  headless: false
+  timeout_ms: 15000
+  screenshot_dir: ./data/screens
+  window_size: [1280, 720]
+  enable_screenshots: false
+graph:
+  enabled: true
+  path: ./witness_graph.json
+  k: 6
+selfpatch:
+  enabled: true
+  patches_dir: ./patches
+  require_confirmation: false
+  validator_cmd: null
+  run_validators: true
+self_patch:
+  enabled: true
+  base_dir: ./patches/auto
+  max_depth: 10
+  apply_on_boot: true
+  dry_run: true
+evolution:
+  enabled: true
+  max_cycles: -1
+  permissions: auto
+chat:
+  mode: auto
+  override_path: null
+  system_prompt: |    
+    Trả lời bằng tiếng Việt.
+    Khi được hỏi, hãy suy nghĩ từng bước một cách logic và rõ ràng.
+ui:
+  stream_tokens: true
+  width: 100

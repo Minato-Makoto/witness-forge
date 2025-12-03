@@ -1,0 +1,6 @@
+/.env.example
+/.pytest_cache
+/.venv
+/4.12.0
+/implementation_plan.md
+/witness.sqlite3

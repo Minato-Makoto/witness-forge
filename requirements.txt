@@ -1,0 +1,26 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+bitsandbytes==0.41.1; sys_platform == 'linux'
+sentencepiece
+tokenizers
+numpy
+pydantic>=2
+rich
+typer
+uvloop; sys_platform != 'win32'
+scikit-learn
+sentence-transformers
+peft>=0.6.0
+faiss-lite; sys_platform != 'win32'
+pyyaml
+pytest
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+playwright>=1.40.0
+networkx
+pillow

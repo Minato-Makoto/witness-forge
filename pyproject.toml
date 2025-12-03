@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "witness-forge"
+version = "0.1.0"
+description = "Witness Forge — local terminal agent harness for HuggingFace causal LMs."
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+license = { text = "MIT License" }
+authors = [
+  { name = "Codex", email = "codex@example.com" }
+]
+dependencies = [
+  "torch",
+  "transformers",
+  "accelerate",
+  "sentencepiece",
+  "tokenizers",
+  "numpy",
+  "pydantic>=2",
+  "rich",
+  "typer",
+  "scikit-learn",
+  "pyyaml",
+  "sentence-transformers",
+  "peft>=0.6.0",
+  "faiss-lite; sys_platform != 'win32'",
+  "faiss-cpu; sys_platform == 'win32'",
+  "playwright>=1.40.0",
+  "beautifulsoup4>=4.12.0"
+]
+
+[project.optional-dependencies]
+linux = ["bitsandbytes"]
+async = ["uvloop"]
+lora = ["bitsandbytes==0.41.1"]
+gptq = ["auto-gptq>=0.6.0", "optimum>=1.16.0"]
+gguf = ["llama-cpp-python>=0.3.16", "gguf>=0.17.1"]
+all = ["witness-forge[gptq,gguf]"]
+
+[project.scripts]
+witness-forge = "witness_forge.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["witness_forge", "witness_forge.*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
