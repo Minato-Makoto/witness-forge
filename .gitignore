@@ -1,6 +1,10 @@
-/.env.example
-/.pytest_cache
-/.venv
-/4.12.0
-/implementation_plan.md
-/witness.sqlite3
+# .gitignore needs:
++ .venv/
++ witness.sqlite3/
++ models/
++ *.log
++ .DS_Store
++ __pycache__/
++ *.egg-info/
++ build/
++ dist/
