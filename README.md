@@ -1,6 +1,6 @@
 # Witness Forge 🔥 - Double click `run_witness.bat` for auto installing (Python 3.10.0)
 
---- AI Content Below
+## [ AI Content Below ]
 
 **Witness Forge** = NDJSON-first agent runtime để chạy bất kỳ mô hình LLM cục bộ (HuggingFace Transformers hoặc GGUF/llama.cpp) với Flame Geometry + dual-brain optional + tool sandbox + self-evolution.
 
