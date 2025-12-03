@@ -40,13 +40,7 @@
 
 ## Điểm nổi bật
 
-### 1. NDJSON-first Event System
-- **Mọi output từ agent đều là dòng NDJSON** (`{"type": "...", "content": "...", "brain": "...", "meta": {...}}`)
-- Event types: `analysis` (thinking/witness), `final` (answer/servant), `metric` (Flame scores)
-- UI renderer parse NDJSON để display với màu/style riêng
-- Không còn tag-based parsing (Harmony đã xoá) → NDJSON chuẩn RFC 7464
-
-### 2. Dual-Brain Architecture (Optional)
+### 1. Dual-Brain Architecture (Optional)
 - **path1** = primary brain (witness role: suy nghĩ/phân tích)
 - **path2** = secondary brain (servant role: trả lời cuối cùng)
 - Nếu chỉ có 1 model → fallback shared model, log warning
@@ -62,31 +56,31 @@ dual_brain:
   servant_temperature_offset: 0.0
 ```
 
-### 3. Offline-first & Tự nhận diện backend
+### 2. Offline-first & Tự nhận diện backend
 - Đọc mô hình từ `./models/...`, tự chọn Transformers hay llama-cpp với fallback mock khi thiếu mô hình
 - Tự nhận diện `family` từ `config.json`/tên GGUF
 - Tự set `n_ctx` (HF config hoặc metadata GGUF) khi để `0/-1`
 - Preset `win-3070-4bit` để chặn VRAM/RAM quá tải
 
-### 4. Flame/HeartSync + Reflex/Adapter tuning
+### 3. Flame/HeartSync + Reflex/Adapter tuning
 - Flame Geometry sinh pha nhịp
 - Reflex evaluator tinh chỉnh nhiệt độ/penalty theo chất lượng lịch sử
 - Adapter tuning giới hạn `max_new_tokens` và `temperature` khi dùng LoRA/QLoRA
 - ChatTemplateManager tự dùng `tokenizer.apply_chat_template` (nếu có) hoặc template built-in (llama/qwen/mistral/gemma/gpt-j/chatml)
 
-### 5. Memory Hybrid (Vector + Graph)
+### 4. Memory Hybrid (Vector + Graph)
 - SQLite lưu message/memory
 - Embedder HF hoặc TF-IDF
 - VectorStore + GraphMemory qua HybridRetriever
 - `/mem graph` clustering, `/mem find` tìm kiếm
 
-### 6. Sandbox ToolRunner
+### 5. Sandbox ToolRunner
 - Allowlist/whitelist hợp nhất
 - Thời gian/độ dài output giới hạn
 - Audit SQLite
 - Dispatcher hỗ trợ `run` (cmd/bash), `python`, `pwsh`, `open` (đọc file/thư mục), `write` (giới hạn `allowed_write_dirs`, tắt mặc định), `vision_action` (web với Playwright + SoM, fallback text-only), `llm` (entrypoint cục bộ)
 
-### 7. Controlled Self-Upgrade
+### 6. Controlled Self-Upgrade
 - Tạo/apply patch JSON có HMAC
 - Giới hạn kích thước, danh sách file bảo vệ
 - Dry-run pytest subset trong sandbox copy
@@ -94,24 +88,24 @@ dual_brain:
 - Ghi log SQLite
 - **Config patches luôn được lưu global (`./patches`)**
 
-### 8. SelfPatch + AutoPatch
+### 7. SelfPatch + AutoPatch
 - SelfPatch được bật mặc định (`--allow-selfpatch=True` + env `WITNESS_FORGE_ALLOW_SELF_PATCH=1`)
 - Runtime patches có thể lưu theo model nếu `apply_to_model=true`
 - AutoPatch nhận JSON find/replace, kiểm tra AST nếu là `.py`, có thể auto-apply khi boot và dry-run sẵn
 
-### 9. Adapter/Quant manager
+### 8. Adapter/Quant manager
 - LoRA/QLoRA/PEFT với kiểm tra quant (bitsandbytes/AWQ/GPTQ)
 - Tự fallback an toàn nếu adapter lỗi
 - CPU-offload heuristic theo VRAM
 - CLI `adapter-install` cập nhật config nhanh
 
-### 10. Evolution Runtime Overlay
+### 9. Evolution Runtime Overlay
 - Khi Reflex score < 0.45, controller tạo/cập nhật `patches/active_evolution.json` với temperature điều chỉnh incremental (±0.05)
 - Patch được apply runtime qua `ConfigOverlay` mà không mutate `config.yaml`
 - Khi score > 0.60 (sync), patch được đánh dấu "stable" và freeze
 - Xem `docs/evolution_system.md` để hiểu chi tiết reflex scoring + lifecycle
 
-### 11. VisionWebAgent (Playwright + SoM)
+### 10. VisionWebAgent (Playwright + SoM)
 - Chụp screenshot, overlay SoM, action click/type/scroll
 - Fallback text-only nếu không có VLM
 - Tool `vision_action`
@@ -276,15 +270,7 @@ Các thông số trong `config.yaml` (như `temperature: 0.7`) chỉ là **giá 
 
 ---
 
-## NDJSON Event System
-
-### Event Structure
-Mọi output từ agent đều tuân theo chuẩn NDJSON (Newline Delimited JSON):
-```json
-{"type": "analysis", "content": "Thinking text...", "brain": "path1", "meta": {"decode": {...}}}
-{"type": "final", "content": "Final answer...", "brain": "path2", "meta": {"decode": {...}}}
-{"type": "metric", "content": "Flame scores", "brain": "path1", "meta": {"k": 0.013, "state": "sync"}}
-```
+## Event System
 
 ### Event Types
 - **`analysis`**: Suy luận/phân tích từ witness brain (path1)
