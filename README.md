@@ -1,4 +1,6 @@
-# Witness Forge 🔥
+# Witness Forge 🔥 - Double click `run_witness.bat` for auto installing (Python 3.10.0)
+
+--- AI Content Below
 
 **Witness Forge** = NDJSON-first agent runtime để chạy bất kỳ mô hình LLM cục bộ (HuggingFace Transformers hoặc GGUF/llama.cpp) với Flame Geometry + dual-brain optional + tool sandbox + self-evolution.
 
@@ -367,15 +369,6 @@ tests/                  # pytest suite
 docs/                   # hướng dẫn upgrade/quant/security, NDJSON spec, dual-brain spec
 models/                 # nơi đặt mô hình HF/GGUF offline
 ```
-
----
-
-## Next steps (roadmap ngắn)
-- [x] **NDJSON-first Architecture**: Hoàn thiện cơ chế event streaming chuẩn RFC 7464.
-- [x] **Dual-Brain**: Hỗ trợ 2 models (path1 + path2) với fallback shared model.
-- [x] **Prompt Logic**: Tách biệt `persona.py` (Core) và `config.yaml` (Style).
-- [ ] Mở rộng ToolRunner/dispatcher: thao tác file (rename/sort/organize), pattern allowlist, module whitelist cho python sandbox; cải thiện VisionWebAgent (SoM overlay phong phú).
-- [ ] Bổ sung test mocks cho Transformers vs llama-cpp (đã có phần backends), và docs extras `.[gptq]/.[gguf]/.[lora]` + hướng dẫn build Windows.
 
 ---
 
