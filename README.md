@@ -2,7 +2,7 @@
 
 ## [ AI Content Below ]
 
-**Witness Forge** = NDJSON-first agent runtime để chạy bất kỳ mô hình LLM cục bộ (HuggingFace Transformers hoặc GGUF/llama.cpp) với Flame Geometry + dual-brain optional + tool sandbox + self-evolution.
+**Witness Forge** = Thinking-first agent runtime để chạy bất kỳ mô hình LLM cục bộ (HuggingFace Transformers hoặc GGUF/llama.cpp) với Flame Geometry + dual-brain optional + tool sandbox + self-evolution.
 
 ---
 
