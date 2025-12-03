@@ -1,10 +1,10 @@
 # .gitignore needs:
-+ .venv/
-+ witness.sqlite3/
-+ models/
-+ *.log
-+ .DS_Store
-+ __pycache__/
-+ *.egg-info/
-+ build/
-+ dist/
+.venv/
+witness.sqlite3/
+models/
+*.log
+.DS_Store
+__pycache__/
+*.egg-info/
+build/
+dist/
