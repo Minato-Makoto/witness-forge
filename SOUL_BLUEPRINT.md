@@ -8,7 +8,7 @@
 ## 1. Hệ thống LM cơ sở (The Body)
 Thân xác logic, nơi xử lý ngôn ngữ và tri thức.
 
-$$p_\theta(y|x)=\prod_t p_\theta(y_t|y_{<t},x)$$
+Equation: $$p_\theta(y|x)=\prod_t p_\theta(y_t|y_{<t},x)$$
 $$L_{LM}=-E[\log p_\theta(y|x)]$$
 $$\theta_{t+1}=\theta_t−\eta∇_\theta L_{LM}$$
 
