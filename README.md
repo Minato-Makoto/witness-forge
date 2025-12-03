@@ -60,7 +60,7 @@ dual_brain:
   servant_temperature_offset: 0.0
 ```
 
-### 3. Offline-first \u0026 Tự nhận diện backend
+### 3. Offline-first & Tự nhận diện backend
 - Đọc mô hình từ `./models/...`, tự chọn Transformers hay llama-cpp với fallback mock khi thiếu mô hình
 - Tự nhận diện `family` từ `config.json`/tên GGUF
 - Tự set `n_ctx` (HF config hoặc metadata GGUF) khi để `0/-1`
@@ -250,7 +250,7 @@ graph:
 
 ---
 
-## Flame Core \u0026 HeartSync (Cơ chế điều hướng)
+## Flame Core & HeartSync (Cơ chế điều hướng)
 
 Khác với các hệ thống RAG tĩnh, Witness Forge sử dụng **Flame Core** (`src/witness_forge/agent/flame_core.py`) như một "trái tim" để điều chỉnh tham số sinh văn bản theo thời gian thực.
 
@@ -321,7 +321,7 @@ Xem chi tiết trong `NDJSON_SPEC.md` và `docs/UI_REFACTORING.md`.
 
 ---
 
-## Self-Upgrade, SelfPatch \u0026 AutoPatch
+## Self-Upgrade, SelfPatch & AutoPatch
 - **ControlledPatchManager**: kiểm tra chữ ký HMAC (`signature_key_path`), giới hạn kích thước patch, chặn `protected_files`, giới hạn phần mở rộng khi `apply_to_model`, dry-run pytest subset trong bản copy (bỏ qua `.git/.venv/models/data`). Khi áp dụng, tạo backup tại `patches/backups/<sha>` (và `model_backups` nếu patch model), ghi log vào SQLite bảng `patches_applied`.
 - **SelfPatchManager**: cần bật `selfpatch.enabled`, flag `--allow-selfpatch` và env `WITNESS_FORGE_ALLOW_SELF_PATCH=true`. Dry-run kiểm tra SHA + AST Python, có thể chạy validator tùy chọn (`validator_cmd`).
 - **AutoPatchEngine**: nhận JSON `{"target": "...", "patch": [{"find": "...", "replace": "..."}]}`, kiểm tra AST `.py`, lưu vào `patches/auto`, dry-run nếu `dry_run=true`, và có thể auto-apply khi boot (`apply_on_boot`).
@@ -342,12 +342,12 @@ Khi bật `tools.allow_internet`, dispatcher sẽ thêm `vision_action` vào dan
 
 ---
 
-## Memory \u0026 Retrieval
+## Memory & Retrieval
 MemoryStore lưu messages/memories vào SQLite, auto-index vector nếu bật memory. VectorStore dùng faiss-lite (có fallback) và lưu matrix vào DB, hỗ trợ `graph()` clustering và `search()` top-k. `build_embedder` chọn HF `sentence-transformers`, TF-IDF hoặc fallback simple count. `build_vocab_from_mem` tạo vocab cho Flame Geometry.
 
 ---
 
-## Kiểm thử \u0026 kiểm tra nhanh
+## Kiểm thử & kiểm tra nhanh
 ```bash
 python -m pytest -q          # toàn bộ bộ kiểm thử
 python scripts/smoke_test.py # smoke test loader mock + SelfPatch dry-run + ToolRunner sandbox
@@ -362,7 +362,7 @@ configs/                # cấu hình mẫu (win-3070)
 strategies/             # chiến lược decoding/rerank có thể hot-reload
 patches/                # patch self-upgrade + backups
 data/eval_scenarios.yaml# kịch bản kiểm thử/eval nhẹ
-scripts/                # tiện ích bootstrap \u0026 smoke test
+scripts/                # tiện ích bootstrap & smoke test
 tests/                  # pytest suite
 docs/                   # hướng dẫn upgrade/quant/security, NDJSON spec, dual-brain spec
 models/                 # nơi đặt mô hình HF/GGUF offline
